@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-success mb-4">
+    <div class="container">
+        <%= link_to 'Local Flickr', root_url, class: 'navbar-brand' %>
+       <%= form_for('', method: :get,
+                        enforce_utf8: false,
+                        html: { class: 'form-inline' } ) do |f| %>
+            <%= f.text_field :s, class: 'form-control'%>
+            <%= f.submit 'Search', class: 'btn btn-dark', name: nil %>
+       <% end %>
+    </div>
+</nav>

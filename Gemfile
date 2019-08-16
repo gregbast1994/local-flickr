@@ -10,6 +10,8 @@ gem 'faker'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'figaro'
+gem 'flickraw'
 
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
