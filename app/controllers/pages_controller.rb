@@ -2,6 +2,8 @@ require 'flickraw'
 
 class PagesController < ApplicationController
   def home
-    @user = flickr.people.findByEmail(find_email: params[:s]) if params[:s]
+    if params[:s]
+      @photos = flickr.photos.search(tags: params[:s], per_page: 25)
+    end
   end
 end
