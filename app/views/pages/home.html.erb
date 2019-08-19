@@ -1,3 +1,11 @@
-<% @photos.count.times do |x| %>
-        <%= image_tag FlickRaw.url(@photos[x]), class: 'img-fluid mb-1' %>
+<% if params[:s] %>
+        <h1 class="pb-4">Search results for: "<%= params[:s] %>"</h1>
+        <div id="search-results" class="row">
+                <div id="search-nav" class="col-12 col-sm-4">
+                        <%= render 'pages/nav' %>
+                </div>
+                <div id="search-results" class="col">
+                        <%= render 'pages/results' %>
+                </div>
+        </div>
 <% end %>

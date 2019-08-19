@@ -1,0 +1,11 @@
+<div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+  <% @results.keys.each do |key| %>
+    <% selected = ( key == :photos ) %>
+    <%= link_to key.to_s, '#' + key.to_s, 
+                class: 'nav-link active',
+                role: 'tab',
+                "data-toggle" => "pill",
+                "aria-controls" => key.to_s,
+                "aria-selected" => selected.to_s %>
+  <% end %>
+</ul>
