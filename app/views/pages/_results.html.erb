@@ -1,7 +1,7 @@
 <div class="tab-content">
     <% @results.each do |key, result| %>
-        <% show = ( key == 'photos' ) ? 'show' : '' %>
-        <div class="tab-pane fade show active" id="<%= key %>" role="tabpanel" aria-labelledby="<%= key %>-tab">
+        <% show = ( key == 'photos' ) ? 'show active' : '' %>
+        <div class="tab-pane fade <%= show %>" id="<%= key %>" role="tabpanel" aria-labelledby="<%= key %>-tab">
             <%= key %>
         </div>
     <% end %>
